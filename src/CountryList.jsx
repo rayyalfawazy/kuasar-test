@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
+import CountryInformation from './CountryInformation';
 
-import { useQuery, gql } from '@apollo/client'
-import CountryInformation from './CountryInformation'
-
+// GraphQL Query to fetch country data
 const GET_COUNTRIES = gql`
-query {
+  query {
     countries {
       name
       code
@@ -19,36 +19,43 @@ query {
         native
         rtl
       }
-	}
-}
-`
+    }
+  }
+`;
 
 function CountryList() {
-  const {error, loading, data} = useQuery(GET_COUNTRIES)
+  // Fetching data using Apollo useQuery hook
+  const { error, loading, data } = useQuery(GET_COUNTRIES);
 
-  console.log(data)
+  // Debug: log the data fetched from the query
+  console.log(data);
 
-  if (loading) return (
-    <div>
-      <p>Loading...</p>
-    </div>
-  )
+  // Handle loading state
+  if (loading) {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
-  if (error) return (
-    <div>
-      <p>Oops, Something went wrong!</p>
-    </div>
-  )
+  // Handle error state
+  if (error) {
+    return (
+      <div>
+        <p>Oops, Something went wrong!</p>
+      </div>
+    );
+  }
 
+  // Handle main state
   return (
     <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 m-8 md:mx-32 md:my-20 lg:mx-52 lg:my-28'>
-      {data.countries.map(country => {
-        return (
-          <CountryInformation country={country} />
-        )
-      })}
+      {data.countries.map((country) => (
+        <CountryInformation key={country.code} countryData={country} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default CountryList
+export default CountryList;
