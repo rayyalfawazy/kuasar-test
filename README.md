@@ -27,12 +27,12 @@ cd kuasar-test
 npm install
 ```
 - Set up environment variables:
-Create a ||.env|| file in the root directory with the following content:
+Create a `.env` file in the root directory with the following content:
 ```
 VITE_GRAPHQL_API=https://countries.trevorblades.com
 VITE_NVIDIA_NIM_API_KEY=your_nvidia_nim_api_key_here
 ```
-Replace ||your_nvidia_nim_api_key_here|| with your actual API key.
+Replace `your_nvidia_nim_api_key_here` with your actual API key.
 
 Start the development server:
 ```
