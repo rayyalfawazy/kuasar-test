@@ -108,6 +108,6 @@ Open the application in your browser at http://localhost:5173.
 
 - Implement unit and integration tests to ensure code stability.
 
-###Dark Mode Support:
+### Dark Mode Support:
 
 - Add theme toggle for better user experience.
