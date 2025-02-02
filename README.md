@@ -74,11 +74,11 @@ Open the application in your browser at http://localhost:5173.
 
 ### Component Structure
 
-- ||CountryList.jsx||: Fetches and displays a list of countries.
+- `CountryList.jsx`: Fetches and displays a list of countries.
 
-- ||CountryInformation.jsx||: Handles the detailed display and dynamic descriptions of each country.
+- `CountryInformation.jsx`: Handles the detailed display and dynamic descriptions of each country.
 
-- ||Chatbot.jsx||: Placeholder for future AI Assistant integration.
+- `Chatbot.jsx`: Placeholder for future AI Assistant integration.
 
 ### State Management
 
