@@ -34,7 +34,7 @@ VITE_NVIDIA_NIM_API_KEY=your_nvidia_nim_api_key_here
 ```
 Replace `your_nvidia_nim_api_key_here` with your actual API key.
 
-Start the development server:
+- Start the development server:
 ```
 npm run dev
 ```
